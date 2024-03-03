@@ -4,21 +4,21 @@ This repository contains information regarding dataset which is used for trainin
 
 ## Files:
 1. **total_generation_prediction.py**: Trains an XGBoost model to predict total generation based on given features. Includes functions for loading the dataset, calculating MAPE, training the model, evaluating using RMSE, MAE, and MAPE, and plotting actual vs predicted values.
-- Features Used: DayOfWeek, Month, HourOfDay,Gb(i),Gd (i), Gr (i), Temperature (c), relative_humidity_2m (%), dew_point_2m (¬∞C), precipitation (mm), cloud_cover (%), wind_speed_10m (km/h), Total_Generation (addition of Generation_1, Generation_2, Generation_3)
+- Features Used: DayOfWeek, Month, HourOfDay,Gb(i),Gd (i), Gr (i), Temperature (c), relative_humidity_2m (%), dew_point_2m (¬∞C), precipitation (mm), cloud_cover (%), wind_speed_10m (km/h), Total_Generation (addition of ABR-SG-001, C-SG-001, ISTM-SG-001)
 2. **total_consumption_prediction.py**: Similar to the previous script, predicts total consumption based on provided features.
-- Features Used: Features Used: DayOfWeek, Month, HourOfDay, Temperature (c), relative_humidity_2m (%), dew_point_2m (¬∞C), precipitation (mm), cloud_cover (%), wind_speed_10m (km/h), Total_Consumption (addition of Consumption_B1, Consumption_B2, Consumption_B3 )
+- Features Used: Features Used: DayOfWeek, Month, HourOfDay, Temperature (c), relative_humidity_2m (%), dew_point_2m (¬∞C), precipitation (mm), cloud_cover (%), wind_speed_10m (km/h), Total_Consumption (addition of ABR-LD-001, C-LD-001, ISTM-LD-001 )
 
 ## Features Description:
 - **Date_Timestamp**: Date and time of the data record.
 - **DayOfWeek**: Day of the week.
 - **Month**: Month of the year.
 - **HourOfDay**: Hour of the day.
-- **Consumption_B1**: Consumption for building B1.
-- **Consumption_B2**: Consumption for building B2.
-- **Consumption_B3**: Consumption for building B3.
-- **Generation_1**: Generation for building 1.
-- **Generation_2**: Generation for building 2.
-- **Generation_3**: Generation for building 3.
+- **ABR-LD-001**: Consumption meter data for building ABR(Building-1).
+- **C-LD-001**: Consumption meter data for building C(Building-22).
+- **ISTM-LD-001**: Consumption meter data for building ISTM(Building-3).
+- **ABR-SG-001**: Solar Generation meter data for ABR(Building-1).
+- **C-SG-001**: Solar Generation meter data for C(Building-2).
+- **ISTM-SG-001**: Solar Generation meter data for ISTM(Building-3).
 - **Gb(i)**: Beam (direct) irradiance on the inclined plane (plane of the array) (W/m2).
 - **Gd(i)**: Diffuse irradiance on the inclined plane (plane of the array) (W/m2).
 - **Gr(i)**: Reflected irradiance on the inclined plane (plane of the array) (W/m2).
